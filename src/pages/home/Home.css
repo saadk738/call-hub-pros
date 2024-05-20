@@ -116,6 +116,7 @@
     gap: 20px;
     padding: 20px;
     min-height: 160px;
+    border-radius: 20px;
     /* box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1); */
     /* border-radius: 10px; */
 }
@@ -134,6 +135,53 @@
 .h-sec5-card:hover{
     background-color: red;
     color: white;
+    transition: 0.3s ease;
+}
+
+/* home section 6  */
+
+.h-sec6{
+    background-image: url('../../assets/imgs/testimonials.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 100%;
+    background-color: #fafbfc; 
+    color: white;
+    padding-left: 10%;
+}
+
+/* section 7  */
+
+.h-sec7-card{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+}
+
+.h-sec7-icon{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.h-sec7-card-heading{
+    font-family: Ubuntu-Bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.h-sec7-card-text{
+    line-height: 22px;
+    font-family: Ubuntu-Regular;
+    /* text-align: justify; */
+}
+
+.h-sec7-card:hover{
+    box-shadow: 15px 20px 35px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
 }

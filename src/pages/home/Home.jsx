@@ -17,6 +17,12 @@ import HandshakeIcon from '@mui/icons-material/Handshake';
 import AdsClickIcon from '@mui/icons-material/AdsClick';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import TestimonialSlider from '../../components/btn/testimonialSlider/TestimonialSlider'
+import TextSnippetIcon from '@mui/icons-material/TextSnippet';
+import AddchartIcon from '@mui/icons-material/Addchart';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import Footer from '../../components/footer/Footer'
 
 export default function Home() {
     const data1 = [
@@ -89,6 +95,25 @@ export default function Home() {
             heading: 'TRIED AND TESTED EXPERIENCE',
             text: 'We have years of experience in business process outsourcing, working with leading organizations internationally.',
         },
+    ]
+
+    const steps = [
+        {
+            icon: TextSnippetIcon,
+            text: "1. Consultations with our staff",
+        },
+        {
+            icon: AddchartIcon,
+            text: "2. Choose your package service",
+        },
+        {
+            icon: SupportAgentIcon,
+            text: "3. Our staff ready to help",
+        },
+        {
+            icon: AssignmentIcon,
+            text: "4. Report work progress"
+        }
     ]
 
     return (
@@ -186,7 +211,7 @@ export default function Home() {
                             <Grid item sm={6} xs={12} key={index}>
                                 <div className="h-sec5-card" data-aos="zoom-in-up">
                                     <div className='h-sec5-icon'>
-                                        <Icon fontSize='large' component={item?.icon}  />
+                                        <Icon fontSize='large' component={item?.icon} />
                                     </div>
                                     <div>
                                         <div className="h-sec5-card-heading">{item?.heading}</div>
@@ -199,8 +224,39 @@ export default function Home() {
                         ))}
                     </Grid>
                 </div>
-
             </div>
+            {/* section 6  */}
+            <div className="h-sec6 padding">
+                <div className="global-heading1 text-center" data-aos="fade-up"
+                    style={{ color: 'white' }}>Testimonials</div>
+                <div className="text-center" data-aos="fade-up"><div className="hr" /></div>
+                <div className="global-heading2 mt-30 mb-5per text-center" data-aos="fade-up" >What they say about us.</div>
+                <TestimonialSlider />
+            </div>
+            {/* section 7  */}
+            <div className="h-sec5 padding">
+                <div className="global-heading1 text-center" data-aos="fade-up">HOW IT WORKS</div>
+                <div className="text-center" data-aos="fade-up"><div className="hr" /></div>
+                <div className="global-heading2 mt-30 mb-5per text-center" data-aos="fade-up" >Easy steps to get service</div>
+                <div className='mt-8per'>
+                    <Grid container spacing={3}>
+                        {steps.map((item) => (
+                            <Grid item sm={3} xs={12} key={item}>
+                                <div className="h-sec7-card" data-aos="zoom-in-up">
+                                    <div className='h-sec7-icon'>
+                                        <Icon fontSize='medium' component={item?.icon} />
+                                    </div>
+                                    <div className='h-sec7-card-text'>
+                                        {item?.text}
+                                    </div>
+                                </div>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </div>
+            </div>
+            {/* footer  */}
+            <Footer/>
         </>
 
     )
