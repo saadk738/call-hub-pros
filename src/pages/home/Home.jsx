@@ -189,8 +189,8 @@ export default function Home() {
                         <div className="global-heading2 mt-30 mb-5per">We will help your business grow</div>
                         <div className="global-text1">Call Hub Pros stands as the epitome of excellence in USA call center industry, offering unparalleled international call center and BPO services. Renowned as the “best call center in USA ,” Call Hub Pros excels in delivering top-tier customer service, cutting-edge technology, and seamless outsourcing solutions to global clients, setting a benchmark for excellence in the industry.</div>
                         <div className='mt-20'>
-                            {features.map(e => (
-                                <div className='h-sec4-list-item' >
+                            {features.map((e, i) => (
+                                <div className='h-sec4-list-item' key={i} >
                                     <div >
                                         <CheckCircleRoundedIcon sx={{ color: 'red' }} />
                                     </div>
@@ -256,7 +256,7 @@ export default function Home() {
                 </div>
             </div>
             {/* footer  */}
-            <Footer/>
+            <Footer />
         </>
 
     )

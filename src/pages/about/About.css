@@ -1,0 +1,9 @@
+.about-hero {
+    background-image: url('../../assets/imgs/aboutBg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-color: #fafbfc;
+    min-height: 500px
+}

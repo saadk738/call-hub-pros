@@ -1,9 +1,8 @@
 import { useEffect } from 'react'
 import './App.css'
-import NavBar from './components/navBar/NavBar'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import Home from './pages/home/Home'
+import AppRouter from './config/AppRouter'
 
 function App() {
 
@@ -16,9 +15,7 @@ function App() {
 
   return (
     <>
-      <NavBar />
-      {/* Home Pg  */}
-      <Home/>
+      <AppRouter />
     </>
   )
 }
