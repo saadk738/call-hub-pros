@@ -50,3 +50,8 @@
   font-family: Ubuntu-BoldItalic;
   src: url('/font/Ubuntu/Ubuntu-BoldItalic.ttf');
 }
+
+@font-face {
+  font-family: Ubuntu-Italic;
+  src: url('/font/Ubuntu/Ubuntu-Italic.ttf');
+}

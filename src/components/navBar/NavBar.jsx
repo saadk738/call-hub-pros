@@ -58,6 +58,7 @@ export default function NavBar() {
           <ul>
             {pages.map(e => (
               <li
+                key={e.name}
                 className={current === e?.name ? 'active' : ''}
                 onClick={() => {
                   setCurrent(e?.name);
