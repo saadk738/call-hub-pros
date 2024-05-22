@@ -12,6 +12,20 @@
     flex-direction: column;
 }
 
+.about-bg-section{
+    background-image: url('../../assets/imgs/testimonials.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-color: #fafbfc;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .about-heading1 {
     font-family: Ubuntu-BoldItalic;
     font-size: 50px;
@@ -30,6 +44,10 @@
     line-height: 45px;
     font-family: Ubuntu-Italic;
     text-align: justify;
+}
+
+.h-sec2-pb{
+    padding-bottom: 300px;
 }
 
 /* section 3  */

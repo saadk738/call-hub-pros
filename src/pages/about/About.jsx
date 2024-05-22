@@ -29,7 +29,7 @@ export default function About() {
                     </Grid>
                     <Grid item sm={6} xs={12}>
                         <div className="text-center">
-                            <img src={amna} alt='img' width='75%' className=' br-10' data-aos="fade-right" />
+                            <img src={amna} alt='img' width='75%' className=' br-10' data-aos="fade-left" />
                         </div>
                     </Grid>
 
@@ -44,10 +44,10 @@ export default function About() {
                         <div className="global-heading1">We communicate to get <span>Your Business</span> to the next level
                         </div>
                         <div className='global-text1 mt-20'>works as an integral part of its clients’ business; respecting their culture and achievements, protecting their reputation, supporting their employees, and committing to results-focused, risk-reward agreements.</div>
-                        <div className='flex-start mt-20'>
+                        <div className='flex-start mt-20 h-sec2-pb'>
                             <Btn
                                 label='Discover More'
-                                style={{ alignSelf: 'flex-start' }}
+                                style={{ alignSelf: 'center' }}
                             />
                         </div>
                     </Grid>
@@ -56,6 +56,10 @@ export default function About() {
                     </Grid>
 
                 </Grid>
+            </div>
+            {/* section bg */}
+            <div className='about-bg-section padding'>
+                <div className="hero-heading" data-aos="fade-up">We are partners whom you can trust</div>
             </div>
             {/* section 3  */}
             <div className="about-sec3 padding">

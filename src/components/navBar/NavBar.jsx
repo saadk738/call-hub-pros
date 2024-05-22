@@ -20,7 +20,7 @@ export default function NavBar() {
     },
     {
       name: 'Services',
-      to: '/'
+      to: '/Services'
     },
     {
       name: 'Careers',
