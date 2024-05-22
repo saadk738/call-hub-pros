@@ -3,26 +3,15 @@ import './Services.css'
 import { Grid, Icon } from '@mui/material'
 import servicesImg1 from '../../assets/imgs/servicesImg1.jpg'
 import servicesImg2 from '../../assets/imgs/servicesImg2.jpg'
-import amna from '../../assets/imgs/amna.png'
-import Btn from '../../components/btn/Btn'
-import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
-import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import Footer from '../../components/footer/Footer'
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
-import HandshakeIcon from '@mui/icons-material/Handshake';
-import AdsClickIcon from '@mui/icons-material/AdsClick';
-import LightbulbIcon from '@mui/icons-material/Lightbulb';
-import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import TestimonialSlider from '../../components/btn/testimonialSlider/TestimonialSlider'
-import TextSnippetIcon from '@mui/icons-material/TextSnippet';
-
 import CallRoundedIcon from '@mui/icons-material/CallRounded';
 import PhoneCallbackRoundedIcon from '@mui/icons-material/PhoneCallbackRounded';
 import LeaderboardRoundedIcon from '@mui/icons-material/LeaderboardRounded';
 import SupportRoundedIcon from '@mui/icons-material/SupportRounded';
-import WifiCalling3RoundedIcon from '@mui/icons-material/WifiCalling3Rounded';
 import MarkChatReadRoundedIcon from '@mui/icons-material/MarkChatReadRounded';
 import Partners from '../home/components/Partners'
+import NavBar from '../../components/navBar/NavBar'
 
 
 export default function Services() {
@@ -73,6 +62,8 @@ export default function Services() {
     ]
     return (
         <>
+        <NavBar active='Services'/>
+            {/* section 0 */}
             <div className='about-hero padding'>
                 <div className="hero-heading">Services</div>
                 <div className="text-center " data-aos="fade-up" ><div className="hr" /></div>

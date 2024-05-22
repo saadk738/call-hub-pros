@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './NavBar.css'
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 import EmailIcon from '@mui/icons-material/Email';
@@ -6,7 +6,7 @@ import logo from '../../assets/imgs/logo.png'
 import Btn from '../btn/Btn';
 import { useNavigate } from 'react-router-dom';
 
-export default function NavBar() {
+export default function NavBar({active}) {
   let [current, setCurrent] = useState('Home');
   const navigate = useNavigate();
   const pages = [
@@ -24,13 +24,18 @@ export default function NavBar() {
     },
     {
       name: 'Careers',
-      to: '/'
+      to: '/Careers'
     },
     {
       name: 'Contact',
       to: '/'
     },
   ]
+
+  useEffect(() => {
+    setCurrent(active)
+  },[active])
+
   return (
     <div>
       {/* navbar top */}

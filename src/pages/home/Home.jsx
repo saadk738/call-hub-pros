@@ -23,6 +23,8 @@ import AddchartIcon from '@mui/icons-material/Addchart';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import Footer from '../../components/footer/Footer'
+import Navbar from '../../components/navBar/NavBar'
+import NavBar from '../../components/navBar/NavBar'
 
 export default function Home() {
     const data1 = [
@@ -118,6 +120,8 @@ export default function Home() {
 
     return (
         <>
+           <NavBar active='Home'/>
+            {/* section 0  */}
             <Carousel />
             {/* section 1  */}
             <div className="h-sec1">

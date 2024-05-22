@@ -7,10 +7,13 @@ import Btn from '../../components/btn/Btn'
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import Footer from '../../components/footer/Footer'
+import NavBar from '../../components/navBar/NavBar'
 
 export default function About() {
     return (
         <>
+            <NavBar active='About Us' />
+            {/* hero section  */}
             <div className='about-hero padding'>
                 <div className="hero-heading">About</div>
                 <div className="text-center mb-5per" data-aos="fade-up" ><div className="hr" /></div>
