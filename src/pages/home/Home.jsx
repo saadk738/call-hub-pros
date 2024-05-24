@@ -17,7 +17,7 @@ import HandshakeIcon from '@mui/icons-material/Handshake';
 import AdsClickIcon from '@mui/icons-material/AdsClick';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import TestimonialSlider from '../../components/btn/testimonialSlider/TestimonialSlider'
+import TestimonialSlider from '../../components/testimonialSlider/TestimonialSlider'
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import AddchartIcon from '@mui/icons-material/Addchart';
 import AssignmentIcon from '@mui/icons-material/Assignment';
@@ -25,8 +25,10 @@ import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navBar/NavBar'
 import NavBar from '../../components/navBar/NavBar'
+import useIsMobile from '../../hooks/useIsMobile'
 
 export default function Home() {
+    const isMobile = useIsMobile();
     const data1 = [
         {
             icon: CallRoundedIcon,
@@ -120,19 +122,19 @@ export default function Home() {
 
     return (
         <>
-           <NavBar active='Home'/>
+            <NavBar active='Home' />
             {/* section 0  */}
             <Carousel />
             {/* section 1  */}
             <div className="h-sec1">
                 <Grid container spacing={5}>
-                    <Grid item sm={1.5} xs={12}>
+                    <Grid item sm={1.5} xs={4}>
                         <div className="h-sec1-heading" data-aos="fade-right">
                             <span>Our</span>
                             Technology Partners
                         </div>
                     </Grid>
-                    <Grid item sm={10} xs={10}>
+                    <Grid item sm={10} xs={7}>
                         <Partners />
                     </Grid>
                 </Grid>
@@ -143,10 +145,10 @@ export default function Home() {
                 <div className="text-center mb-5per" data-aos="fade-up" ><div className="hr" /></div>
                 <Grid container spacing={5}>
                     <Grid item sm={5.5} xs={12}>
-                        <img src={aboutImg} alt='img' width='100%' className='mt-80 br-10' data-aos="fade-right" />
+                        <img src={aboutImg} alt='img' width='100%' className='mt-80 br-10' data-aos={isMobile ? "zoom-in-up" : "fade-right"} />
                     </Grid>
                     <Grid item sm={6.5} xs={12}>
-                        <img src={aboutImg1} alt='img' width='100%' data-aos="fade-left" />
+                        <img src={aboutImg1} alt='img' width='100%' data-aos={isMobile ? "zoom-in-up" : "fade-left"} />
                     </Grid>
                     <Grid item sm={5.5} xs={12}>
                     </Grid>
@@ -235,7 +237,9 @@ export default function Home() {
                     style={{ color: 'white' }}>Testimonials</div>
                 <div className="text-center" data-aos="fade-up"><div className="hr" /></div>
                 <div className="global-heading2 mt-30 mb-5per text-center" data-aos="fade-up" >What they say about us.</div>
-                <TestimonialSlider />
+                <div className="testimonial-padding">
+                    <TestimonialSlider />
+                </div>
             </div>
             {/* section 7  */}
             <div className="h-sec5 padding">

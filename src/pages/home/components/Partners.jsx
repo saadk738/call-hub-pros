@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import './Partners.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -35,7 +36,7 @@ export default function Partners() {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     initialSlide: 2
                 }
@@ -72,8 +73,8 @@ export default function Partners() {
                 }}
                 {...settings}>
                 {sliderData.map((item, i) => (
-                    <div className="sliderItem" key={i}>
-                        <img src={item} alt="img" width='80%' />
+                    <div className="sliderItem-partners" key={i}>
+                        <img src={item} alt="img" className='partners-slide-img' />
                     </div>
                 ))}
             </Slider>

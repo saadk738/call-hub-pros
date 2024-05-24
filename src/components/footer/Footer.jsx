@@ -81,13 +81,13 @@ export default function Footer() {
                             <div className='f-link' >{item?.title}</div>
                         ))}
                     </Grid>
-                    <Grid item sm={3} xs={12}>
+                    <Grid item sm={3} xs={6}>
                         <div className="f-heading">Company</div>
                         {companies.map(item => (
                             <div className='f-link' >{item?.title}</div>
                         ))}
                     </Grid>
-                    <Grid item sm={2} xs={12}>
+                    <Grid item sm={2} xs={6}>
                         <div className="f-heading">Support</div>
                         {supports.map(item => (
                             <div className='f-link' >{item?.title}</div>

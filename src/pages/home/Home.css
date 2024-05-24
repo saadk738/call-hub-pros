@@ -183,3 +183,19 @@
     box-shadow: 15px 20px 35px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
 }
+
+@media screen and (max-width: 900px) {
+    .h-sec1-heading{
+        font-size: 18px;
+    }
+
+    .h-sec3-card, 
+    .h-sec3-card-big{
+        min-height: 100px;
+        padding-bottom: 20px;
+    }
+
+    .testimonial-padding{
+        padding: 0px 10px;
+    }
+}

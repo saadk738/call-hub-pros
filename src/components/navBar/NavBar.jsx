@@ -5,9 +5,12 @@ import EmailIcon from '@mui/icons-material/Email';
 import logo from '../../assets/imgs/logo.png'
 import Btn from '../btn/Btn';
 import { useNavigate } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function NavBar({active}) {
   let [current, setCurrent] = useState('Home');
+  let [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
   const pages = [
     {
@@ -59,13 +62,15 @@ export default function NavBar({active}) {
       {/* navbar bottom  */}
       <div className="nb-bottom">
         <img src={logo} alt="logo" />
-        <div>
-          <ul>
+        <div className='menu-icon' onClick={() => setShowMenu(!showMenu)} >{showMenu ? <CloseIcon/> : <MenuIcon/>}</div>
+        <div className={showMenu ? 'nb-linksBox show-menu' : 'nb-linksBox'} >
+          <ul className='nb-ul'>
             {pages.map(e => (
               <li
                 key={e.name}
                 className={current === e?.name ? 'active' : ''}
                 onClick={() => {
+                  setShowMenu(false);
                   setCurrent(e?.name);
                   navigate(e?.to);
                 }}

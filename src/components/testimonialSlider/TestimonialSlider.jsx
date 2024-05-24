@@ -3,9 +3,9 @@ import './TestimonialSlider.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import client1 from '../../../assets/imgs/client1.jpg'
-import client2 from '../../../assets/imgs/client2.jpg'
-import client3 from '../../../assets/imgs/client3.jpg'
+import client1 from '../../assets/imgs/client1.jpg'
+import client2 from '../../assets/imgs/client2.jpg'
+import client3 from '../../assets/imgs/client3.jpg'
 
 export default function TestimonialSlider() {
     const sliderData = [
