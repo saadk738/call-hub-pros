@@ -134,7 +134,7 @@ export default function Services() {
             </div>
             {/* section 4 */}
             <div className='about-bg-section padding'>
-                <div className="hero-heading" data-aos="fade-up" >We are partners whom you can trust</div>
+                <div className="hero-heading1" data-aos="fade-up" >We are partners whom you can trust</div>
             </div>
             {/* section  5 */}
             <div className="h-sec1"> <Grid container spacing={5}>
