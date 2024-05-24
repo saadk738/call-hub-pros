@@ -8,8 +8,10 @@ import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import Footer from '../../components/footer/Footer'
 import NavBar from '../../components/navBar/NavBar'
+import useIsMobile from '../../hooks/useIsMobile'
 
 export default function About() {
+    const isMobile = useIsMobile();
     return (
         <>
             <NavBar active='About Us' />
@@ -24,17 +26,22 @@ export default function About() {
                 <div className="global-heading1 text-center" data-aos="fade-up">Hey There !</div>
                 <div className="text-center mb-5per" data-aos="fade-up" ><div className="hr" /></div>
                 <Grid container spacing={5}>
+              {isMobile &&  <Grid item sm={6} xs={12}>
+                        <div className="text-center">
+                            <img src={amna} alt='img' width='75%' className=' br-10' data-aos="fade-up" />
+                        </div>
+                    </Grid>}
                     <Grid item sm={6} xs={12} data-aos="fade-up">
                         <div className="about-heading1">I'm <span>Amna Masood</span>
                         </div>
                         <div className='about-text1 mt-20'>How I went from overworked "yes girl" to helping thousands of online entrepreneurs build a life and best experience of contact center. "Customers may forget what you said but they will never forget how we make them feel"</div>
 
                     </Grid>
-                    <Grid item sm={6} xs={12}>
+                   {!isMobile && <Grid item sm={6} xs={12}>
                         <div className="text-center">
                             <img src={amna} alt='img' width='75%' className=' br-10' data-aos="fade-left" />
                         </div>
-                    </Grid>
+                    </Grid>}
 
                 </Grid>
             </div>
@@ -62,7 +69,7 @@ export default function About() {
             </div>
             {/* section bg */}
             <div className='about-bg-section padding'>
-                <div className="hero-heading" data-aos="fade-up">We are partners whom you can trust</div>
+                <div className="hero-heading1" data-aos="fade-up">We are partners whom you can trust</div>
             </div>
             {/* section 3  */}
             <div className="about-sec3 padding">

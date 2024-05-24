@@ -76,3 +76,24 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 900px) {
+    .about-heading1{
+        font-size: 35px;
+    }
+
+    .about-heading1 span{
+        font-size: 35px;
+    }
+
+    .about-text1 {
+        font-size: 20px;
+        line-height: 28px;
+        font-family: Ubuntu-Italic;
+        text-align: justify;
+    }
+
+    .h-sec2-pb{
+        padding-bottom: 30px;
+    }
+}

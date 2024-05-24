@@ -12,9 +12,11 @@ import SupportRoundedIcon from '@mui/icons-material/SupportRounded';
 import MarkChatReadRoundedIcon from '@mui/icons-material/MarkChatReadRounded';
 import Partners from '../home/components/Partners'
 import NavBar from '../../components/navBar/NavBar'
+import useIsMobile from '../../hooks/useIsMobile'
 
 
 export default function Services() {
+    const isMobile = useIsMobile();
     const features = ["Professional Staff", 'Affordable Price', '100% Guarantee Satisfaction', '24/7 Support']
     const features1 = ["Professional", 'Experience', '24/7 Support']
 
@@ -74,7 +76,7 @@ export default function Services() {
                 <div className="text-center mb-5per" data-aos="fade-up" ><div className="hr" /></div>
                 <Grid container spacing={5}>
                     <Grid item sm={5.5} xs={12}>
-                        <img src={servicesImg1} alt='img' width='100%' className=' br-10' data-aos="fade-right" />
+                        <img src={servicesImg1} alt='img' width='100%' className=' br-10' data-aos={isMobile ? "fade-up" : "fade-right"} />
                     </Grid>
                     <Grid item sm={6.5} xs={12} data-aos="fade-up">
                         <div className="global-heading1">We promise to <span>protect</span> your brand
@@ -84,7 +86,7 @@ export default function Services() {
                             Our customized solutions reflect your brand’s unique identity, offering personalized service that resonates with your customers. By continuously integrating the latest advancements in technology and best practices, we keep your brand ahead of the curve. Trust Call Hub Pros to deliver consistent, reliable support that strengthens your customer relationships and upholds your brand's integrity.</div>
                         <div className='mt-20 flex-row'>
                             {features1.map((e, i) => (
-                                <div className='h-sec4-list-item' key={i} >
+                                <div className='h-sec4-list-item1' key={i} >
                                     <div >
                                         <CheckCircleRoundedIcon sx={{ color: 'red' }} />
                                     </div>
@@ -135,15 +137,14 @@ export default function Services() {
                 <div className="hero-heading" data-aos="fade-up" >We are partners whom you can trust</div>
             </div>
             {/* section  5 */}
-            <div className="h-sec1">
-                <Grid container spacing={5}>
-                    <Grid item sm={1.5} xs={12}>
+            <div className="h-sec1"> <Grid container spacing={5}>
+                    <Grid item sm={1.5} xs={4}>
                         <div className="h-sec1-heading" data-aos="fade-right">
                             <span>Our</span>
                             Technology Partners
                         </div>
                     </Grid>
-                    <Grid item sm={10} xs={10}>
+                    <Grid item sm={10} xs={7}>
                         <Partners />
                     </Grid>
                 </Grid>
@@ -172,7 +173,7 @@ export default function Services() {
                         </div>
                     </Grid>
                     <Grid item sm={5.5} xs={12}>
-                        <img src={servicesImg2} alt='img' width='100%' className=' br-10' data-aos="fade-left" />
+                        <img src={servicesImg2} alt='img' width='100%' className=' br-10' data-aos={isMobile ? "fade-up" : "fade-left"} />
                     </Grid>
                 </Grid>
             </div>

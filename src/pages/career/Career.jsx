@@ -20,7 +20,7 @@ export default function Career() {
                     <Grid item xs={2.5}></Grid>
                     <Grid item sm={7} xs={12}>
                         <div className="career-form">
-                            <div className="global-heading1 text-center" data-aos="fade-up">Join Our Team</div>
+                            <div className="global-heading1 text-center">Join Our Team</div>
                             <div className="text-center mb-5per" data-aos="fade-up"><div className="hr" /></div>
                             <Grid container spacing={3}>
                                 <Grid item sm={6} xs={12}>

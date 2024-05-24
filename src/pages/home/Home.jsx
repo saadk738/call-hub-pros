@@ -145,7 +145,7 @@ export default function Home() {
                 <div className="text-center mb-5per" data-aos="fade-up" ><div className="hr" /></div>
                 <Grid container spacing={5}>
                     <Grid item sm={5.5} xs={12}>
-                        <img src={aboutImg} alt='img' width='100%' className='mt-80 br-10' data-aos={isMobile ? "zoom-in-up" : "fade-right"} />
+                        <img src={aboutImg} alt='img' width='100%' className={isMobile?'br-10 mt-20':'mt-80 br-10'} data-aos={isMobile ? "zoom-in-up" : "fade-right"} />
                     </Grid>
                     <Grid item sm={6.5} xs={12}>
                         <img src={aboutImg1} alt='img' width='100%' data-aos={isMobile ? "zoom-in-up" : "fade-left"} />
